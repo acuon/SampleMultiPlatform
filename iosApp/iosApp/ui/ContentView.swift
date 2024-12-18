@@ -7,15 +7,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             switch currentScreen {
-            case .main:
-                MainScreen()
-                .navigationBarHidden(true)
-//            case .meal:
-//                MealScreen(currentScreen: $currentScreen)
-//                .navigationBarHidden(true)
-//            }
-            default:
-                Text("Content for \(currentScreen.title)")
+                case .main:
+                    MainScreen()
+                    .navigationBarHidden(true)
+                case .meal:
+                    MealScreen()
+                    .navigationBarHidden(true)
+                default:
+                    Text("Content for \(currentScreen.title)")
             }
         }
     }

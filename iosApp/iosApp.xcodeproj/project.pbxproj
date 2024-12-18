@@ -10,6 +10,9 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		63A094502D128ACA0009FEE8 /* MealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0944F2D128AC60009FEE8 /* MealScreen.swift */; };
+		63A094532D128BBA0009FEE8 /* MealModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A094522D128BB60009FEE8 /* MealModels.swift */; };
+		63A094562D128BCD0009FEE8 /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A094552D128BCA0009FEE8 /* DataUtils.swift */; };
 		63C35AA82D1139BE0097976F /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35AA42D1139BE0097976F /* ViewModelBinding.swift */; };
 		63C35AA92D1139BE0097976F /* ViewModelObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35AA52D1139BE0097976F /* ViewModelObservable.swift */; };
 		63C35AAA2D1139BE0097976F /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C35AA62D1139BE0097976F /* ViewModelState.swift */; };
@@ -23,6 +26,9 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		63A0944F2D128AC60009FEE8 /* MealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealScreen.swift; sourceTree = "<group>"; };
+		63A094522D128BB60009FEE8 /* MealModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModels.swift; sourceTree = "<group>"; };
+		63A094552D128BCA0009FEE8 /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
 		63C35AA22D1139BE0097976F /* CFlowExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFlowExt.swift; sourceTree = "<group>"; };
 		63C35AA42D1139BE0097976F /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		63C35AA52D1139BE0097976F /* ViewModelObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelObservable.swift; sourceTree = "<group>"; };
@@ -64,9 +70,45 @@
 		63A0944B2D1276A60009FEE8 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				63A094542D128BC50009FEE8 /* utils */,
+				63A0944E2D128ABB0009FEE8 /* meal */,
+				63A0944C2D128AA10009FEE8 /* home */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		63A0944C2D128AA10009FEE8 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				63C35AAF2D113C930097976F /* HomeScreen.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		63A0944E2D128ABB0009FEE8 /* meal */ = {
+			isa = PBXGroup;
+			children = (
+				63A094512D128BA90009FEE8 /* model */,
+				63A0944F2D128AC60009FEE8 /* MealScreen.swift */,
+			);
+			path = meal;
+			sourceTree = "<group>";
+		};
+		63A094512D128BA90009FEE8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				63A094522D128BB60009FEE8 /* MealModels.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		63A094542D128BC50009FEE8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				63A094552D128BCA0009FEE8 /* DataUtils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		63C35AA12D11394B0097976F /* mokoMvvmFlowSwiftUi */ = {
@@ -103,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				63A0944B2D1276A60009FEE8 /* ui */,
-				63C35AAF2D113C930097976F /* HomeScreen.swift */,
 				63C35AA12D11394B0097976F /* mokoMvvmFlowSwiftUi */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -218,10 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A094502D128ACA0009FEE8 /* MealScreen.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				63C35AA82D1139BE0097976F /* ViewModelBinding.swift in Sources */,
 				63C35AA92D1139BE0097976F /* ViewModelObservable.swift in Sources */,
+				63A094532D128BBA0009FEE8 /* MealModels.swift in Sources */,
 				63C35AAA2D1139BE0097976F /* ViewModelState.swift in Sources */,
+				63A094562D128BCD0009FEE8 /* DataUtils.swift in Sources */,
 				63C35AB02D113C990097976F /* HomeScreen.swift in Sources */,
 				63C35AAB2D1139BE0097976F /* ViewModelStateNullable.swift in Sources */,
 				63C35AAC2D1139BE0097976F /* CFlowExt.swift in Sources */,
