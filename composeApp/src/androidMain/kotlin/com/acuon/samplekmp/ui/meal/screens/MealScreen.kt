@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.acuon.samplekmp.R
-import com.acuon.samplekmp.ui.home.components.CompositionUI
+import com.acuon.samplekmp.ui.meal.components.CompositionUI
 import com.acuon.samplekmp.ui.home.components.RewardPointsUI
 import com.acuon.samplekmp.ui.meal.components.NutrientsUI
 import com.acuon.samplekmp.ui.meal.components.PortionUI

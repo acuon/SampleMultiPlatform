@@ -5,6 +5,7 @@
 //  Created by Rohit's Macbook on 18/12/24.
 //  Copyright © 2024 orgName. All rights reserved.
 //
+import SwiftUI
 
 struct DataUtils {
     static let tasksList: [TaskModel] = [

@@ -90,6 +90,20 @@ struct MealInfoView: View {
     }
 }
 
+struct RewardPointsView: View {
+    let points: String
+    
+    var body: some View {
+        HStack {
+            Text(points)
+                .font(.caption)
+                .padding(.trailing, 3)
+            Image(systemName: "diamond.fill")
+                .foregroundColor(.orange)
+        }
+    }
+}
+
 struct PortionView: View {
     @Binding var weight: Int
 
@@ -141,7 +155,7 @@ struct NutrientsView: View {
                 .font(.system(size: 16, weight: .bold))
 
             ForEach(nutrients, id: \.label) { nutrient in
-                NutrientRow(nutrient: <#T##NutrientModel#>)
+                NutrientRow(nutrient: nutrient)
             }
         }
         .padding(16)
@@ -246,9 +260,7 @@ struct SaveButton: View {
     var ratings: Int
 
     var body: some View {
-        Button(action: {
-            // Handle save action
-        }) {
+        Button(action: { }) {
             Text("Save")
                 .foregroundColor(.black)
                 .font(.system(size: 16))

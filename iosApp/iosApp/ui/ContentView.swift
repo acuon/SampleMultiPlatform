@@ -119,15 +119,6 @@ struct MainScreen: View {
         VStack(spacing: 0) {
             TopAppBar(title: selectedScreen.title)
             
-            ZStack {
-                switch selectedScreen {
-                    case .Home:
-                        HomeScreen()
-                    default:
-                        Text("Content for \(selectedScreen.title)")
-                }
-            }
-            
             BottomNavigationBar()
         }
     }
@@ -181,83 +172,25 @@ struct BottomNavigationBar: View {
                  }
                  .tag(Tab.progress)
              
-             ProgressView()
+             Text("Content for Inspo")
                  .tabItem {
                      Label("Inspo", systemImage: "lightbulb")
                  }
                  .tag(Tab.inspo)
              
-             ProgressView()
+             Text("Content for Inbox")
                  .tabItem {
                      Label("Inbox", systemImage: "envelope")
                  }
                  .tag(Tab.inbox)
              
-             ProgressView()
+             Text("Content for Info")
                  .tabItem {
                      Label("Info", systemImage: "info.circle")
                  }
                  .tag(Tab.info)
          }
      }
-}
-
-struct UserGreeting: View {
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Good morning, Jeanette!")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.top, 16)
-                .padding(.horizontal, 16)
-            
-            HStack(spacing: 8) {
-                Image(systemName: "person.crop.circle.fill")
-                    .resizable()
-                    .frame(width: 64, height: 64)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                
-                Text("Great that you're here, you have 5 new tasks.")
-                    .font(.body)
-            }
-            .padding(.horizontal, 16)
-            .padding(.bottom, 16)
-        }
-        .background(Color.white)
-        .cornerRadius(16, antialiased: true)
-    }
-}
-
-struct DailyCheckInCard: View {
-    var body: some View {
-        Text("Daily Check-In Card Placeholder")
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-    }
-}
-
-struct TasksSection: View {
-    var body: some View {
-        Text("Tasks Section Placeholder")
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-    }
-}
-
-struct RewardPointsView: View {
-    let points: String
-    
-    var body: some View {
-        HStack {
-            Text(points)
-                .font(.caption)
-                .padding(.trailing, 3)
-            Image(systemName: "diamond.fill")
-                .foregroundColor(.orange)
-        }
-    }
 }
 
 struct CircularProgressView: View {

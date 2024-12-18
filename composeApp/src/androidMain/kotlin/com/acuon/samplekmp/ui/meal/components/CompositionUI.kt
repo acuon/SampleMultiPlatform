@@ -1,4 +1,4 @@
-package com.acuon.samplekmp.ui.home.components
+package com.acuon.samplekmp.ui.meal.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
