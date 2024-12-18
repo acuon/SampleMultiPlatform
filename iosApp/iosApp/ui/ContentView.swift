@@ -2,6 +2,7 @@ import SwiftUI
 import Shared
 
 struct ContentView: View {
+    @ObservedObject var viewModel: SampleViewModel = SampleViewModel()
     @State private var currentScreen: Screen = .main
     
     var body: some View {
